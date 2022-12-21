@@ -8,6 +8,10 @@ import org.Designs.Decorator.HeadFirst.Condiments.Milk;
 import org.Designs.Decorator.HeadFirst.Condiments.Mocha;
 import org.Designs.Decorator.HeadFirst.Condiments.Whip;
 import org.Designs.Decorator.HeadFirst.LowerCaseInputStream;
+import org.Designs.Decorator.Pizzas.BasePizza;
+import org.Designs.Decorator.Pizzas.Jalapeno;
+import org.Designs.Decorator.Pizzas.Margaritta;
+import org.Designs.Decorator.Pizzas.Olives;
 import org.Designs.Observer.Observers.CurrentConditionsDisplay;
 import org.Designs.Observer.Observers.ForcastDisplay;
 import org.Designs.Observer.Observers.StatisticsDisplay;
@@ -44,6 +48,7 @@ public class Main {
         weatherData.setMeasurements(78, 90, 29.2f);
         */
 
+        /*
         System.out.println("Decorator Pattern");
         Beverage beverage = new Expresso();
         System.out.println(beverage.getDescription() + " $" + beverage.cost());
@@ -72,6 +77,13 @@ public class Main {
         }catch (Exception e) {
             e.printStackTrace();
         }
+
+        BasePizza pizza = new Margaritta();
+        pizza = new Jalapeno(new Olives(pizza));
+        System.out.println(pizza.getCost());
+        */
+
+
 
 
 
