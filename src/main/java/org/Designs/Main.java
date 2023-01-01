@@ -12,6 +12,10 @@ import org.Designs.Decorator.Pizzas.BasePizza;
 import org.Designs.Decorator.Pizzas.Jalapeno;
 import org.Designs.Decorator.Pizzas.Margaritta;
 import org.Designs.Decorator.Pizzas.Olives;
+import org.Designs.Factory.HeadFirst.UsingAbstract.AbstractPizza;
+import org.Designs.Factory.HeadFirst.UsingAbstract.AbstractPizzaStore;
+import org.Designs.Factory.HeadFirst.UsingAbstract.ChicagoPizzaStore;
+import org.Designs.Factory.HeadFirst.UsingAbstract.NYStyleStore;
 import org.Designs.Observer.Observers.CurrentConditionsDisplay;
 import org.Designs.Observer.Observers.ForcastDisplay;
 import org.Designs.Observer.Observers.StatisticsDisplay;
@@ -83,7 +87,15 @@ public class Main {
         System.out.println(pizza.getCost());
         */
 
+        System.out.println("Factory Pattern");
+        AbstractPizzaStore pizzaStore = new NYStyleStore();
+        AbstractPizzaStore pizzaStore2 = new ChicagoPizzaStore();
 
+        AbstractPizza pizza = pizzaStore.orderPizza("cheese");
+        System.out.println("Ethan ordered a " + pizza.getName() );
+
+        pizza = pizzaStore2.orderPizza("cheese");
+        System.out.println("Joel ordered a " + pizza.getName() );
 
 
 

@@ -1,5 +1,7 @@
 package org.Designs.Factory.HeadFirst;
 
+import org.Designs.Factory.HeadFirst.SimpleFactory.SimplePizzaFactory;
+
 public class PizzaStore {
     SimplePizzaFactory factory;
 

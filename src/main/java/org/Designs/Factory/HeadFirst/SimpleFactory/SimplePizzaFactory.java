@@ -1,4 +1,6 @@
-package org.Designs.Factory.HeadFirst;
+package org.Designs.Factory.HeadFirst.SimpleFactory;
+
+import org.Designs.Factory.HeadFirst.*;
 
 public class SimplePizzaFactory {
 
