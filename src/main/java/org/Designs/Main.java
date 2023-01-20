@@ -20,6 +20,7 @@ import org.Designs.Observer.Observers.CurrentConditionsDisplay;
 import org.Designs.Observer.Observers.ForcastDisplay;
 import org.Designs.Observer.Observers.StatisticsDisplay;
 import org.Designs.Observer.Subjects.WeatherData;
+import org.Designs.Singleton.SingletonBasic;
 import org.Designs.Strategy.FlyBehaviours.FlyRocketPowered;
 import org.Designs.Strategy.MallardDuck;
 import org.Designs.Strategy.ModelDuck;
@@ -87,6 +88,7 @@ public class Main {
         System.out.println(pizza.getCost());
         */
 
+        /*
         System.out.println("Factory Pattern");
         AbstractPizzaStore pizzaStore = new NYStyleStore();
         AbstractPizzaStore pizzaStore2 = new ChicagoPizzaStore();
@@ -96,6 +98,13 @@ public class Main {
 
         pizza = pizzaStore2.orderPizza("cheese");
         System.out.println("Joel ordered a " + pizza.getName() );
+        */
+
+        System.out.println("Singleton Pattern");
+        SingletonBasic singleton = SingletonBasic.getInstance("the first instance");
+        System.out.println(singleton.getMessage());
+        SingletonBasic singleton2 = SingletonBasic.getInstance("the second instance");
+        System.out.println(singleton2.getMessage());
 
 
     }
