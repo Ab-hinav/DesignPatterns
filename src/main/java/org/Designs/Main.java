@@ -1,5 +1,6 @@
 package org.Designs;
 
+import org.Designs.Command.headFirst.*;
 import org.Designs.Decorator.HeadFirst.Beverage;
 import org.Designs.Decorator.HeadFirst.Beverages.DarkRoast;
 import org.Designs.Decorator.HeadFirst.Beverages.Expresso;
@@ -100,11 +101,66 @@ public class Main {
         System.out.println("Joel ordered a " + pizza.getName() );
         */
 
+        /*
         System.out.println("Singleton Pattern");
         SingletonBasic singleton = SingletonBasic.getInstance("the first instance");
         System.out.println(singleton.getMessage());
         SingletonBasic singleton2 = SingletonBasic.getInstance("the second instance");
         System.out.println(singleton2.getMessage());
+        */
+
+        /*
+        System.out.println("Command Pattern");
+        SimpleRemoteControl remoteControl = new SimpleRemoteControl();
+        Light light = new Light();
+        LightOnCommand lightOnCommand = new LightOnCommand(light);
+        remoteControl.setCommand(lightOnCommand);
+        remoteControl.buttonWasPressed();
+        GarageDoor garageDoor = new GarageDoor();
+        GarageDoorOpenCommand garageDoorOpenCommand = new GarageDoorOpenCommand(garageDoor);
+        remoteControl.setCommand(garageDoorOpenCommand);
+        remoteControl.buttonWasPressed();
+        */
+
+
+        System.out.println(" Command Pattern -- continue");
+        RealRemoteControl remoteControl = new RealRemoteControl();
+        Light livingRoomLight = new Light("Living Room");
+        Light kitchenLight = new Light("Kitchen");
+        GarageDoor garageDoor = new GarageDoor();
+        Stereo stereo = new Stereo();
+
+        LightOnCommand livingRoomLightOn = new LightOnCommand(livingRoomLight);
+        LightOffCommand livingRoomLightOff = new LightOffCommand(livingRoomLight);
+        LightOnCommand kitchenLightOn = new LightOnCommand(kitchenLight);
+        LightOffCommand kitchenLightOff = new LightOffCommand(kitchenLight);
+
+        GarageDoorOpenCommand garageDoorOpen = new GarageDoorOpenCommand(garageDoor);
+        GarageDoorCloseCommand garageDoorClose = new GarageDoorCloseCommand(garageDoor);
+        StereoOnWithCDCommand stereoOnWithCD = new StereoOnWithCDCommand(stereo);
+        StereoOffCommand stereoOff = new StereoOffCommand(stereo);
+
+        remoteControl.setCommands(0, livingRoomLightOn, livingRoomLightOff);
+        remoteControl.setCommands(1, kitchenLightOn, kitchenLightOff);
+        remoteControl.setCommands(2, garageDoorOpen, garageDoorClose);
+        remoteControl.setCommands(3, stereoOnWithCD, stereoOff);
+
+        System.out.println(remoteControl);
+
+        remoteControl.onButtonWasPushed(0);
+        remoteControl.offButtonWasPushed(0);
+        remoteControl.onButtonWasPushed(1);
+        remoteControl.offButtonWasPushed(1);
+        remoteControl.onButtonWasPushed(2);
+        remoteControl.offButtonWasPushed(2);
+        remoteControl.onButtonWasPushed(3);
+        remoteControl.offButtonWasPushed(3);
+
+
+
+
+
+
 
 
     }
