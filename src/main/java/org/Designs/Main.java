@@ -124,37 +124,53 @@ public class Main {
 
 
         System.out.println(" Command Pattern -- continue");
+//        RealRemoteControl remoteControl = new RealRemoteControl();
+//        Light livingRoomLight = new Light("Living Room");
+//        Light kitchenLight = new Light("Kitchen");
+//        GarageDoor garageDoor = new GarageDoor();
+//        Stereo stereo = new Stereo();
+//
+//        LightOnCommand livingRoomLightOn = new LightOnCommand(livingRoomLight);
+//        LightOffCommand livingRoomLightOff = new LightOffCommand(livingRoomLight);
+//        LightOnCommand kitchenLightOn = new LightOnCommand(kitchenLight);
+//        LightOffCommand kitchenLightOff = new LightOffCommand(kitchenLight);
+//
+//        GarageDoorOpenCommand garageDoorOpen = new GarageDoorOpenCommand(garageDoor);
+//        GarageDoorCloseCommand garageDoorClose = new GarageDoorCloseCommand(garageDoor);
+//        StereoOnWithCDCommand stereoOnWithCD = new StereoOnWithCDCommand(stereo);
+//        StereoOffCommand stereoOff = new StereoOffCommand(stereo);
+//
+//        remoteControl.setCommands(0, livingRoomLightOn, livingRoomLightOff);
+//        remoteControl.setCommands(1, kitchenLightOn, kitchenLightOff);
+//        remoteControl.setCommands(2, garageDoorOpen, garageDoorClose);
+//        remoteControl.setCommands(3, stereoOnWithCD, stereoOff);
+//
+//        System.out.println(remoteControl);
+//
+//        remoteControl.onButtonWasPushed(0);
+//        remoteControl.offButtonWasPushed(0);
+//        remoteControl.onButtonWasPushed(1);
+//        remoteControl.offButtonWasPushed(1);
+//        remoteControl.onButtonWasPushed(2);
+//        remoteControl.offButtonWasPushed(2);
+//        remoteControl.onButtonWasPushed(3);
+//        remoteControl.offButtonWasPushed(3);
+        System.out.println("Command Pattern -- continue");
         RealRemoteControl remoteControl = new RealRemoteControl();
         Light livingRoomLight = new Light("Living Room");
         Light kitchenLight = new Light("Kitchen");
         GarageDoor garageDoor = new GarageDoor();
         Stereo stereo = new Stereo();
 
-        LightOnCommand livingRoomLightOn = new LightOnCommand(livingRoomLight);
-        LightOffCommand livingRoomLightOff = new LightOffCommand(livingRoomLight);
-        LightOnCommand kitchenLightOn = new LightOnCommand(kitchenLight);
-        LightOffCommand kitchenLightOff = new LightOffCommand(kitchenLight);
-
-        GarageDoorOpenCommand garageDoorOpen = new GarageDoorOpenCommand(garageDoor);
-        GarageDoorCloseCommand garageDoorClose = new GarageDoorCloseCommand(garageDoor);
-        StereoOnWithCDCommand stereoOnWithCD = new StereoOnWithCDCommand(stereo);
-        StereoOffCommand stereoOff = new StereoOffCommand(stereo);
-
-        remoteControl.setCommands(0, livingRoomLightOn, livingRoomLightOff);
-        remoteControl.setCommands(1, kitchenLightOn, kitchenLightOff);
-        remoteControl.setCommands(2, garageDoorOpen, garageDoorClose);
-        remoteControl.setCommands(3, stereoOnWithCD, stereoOff);
-
-        System.out.println(remoteControl);
-
-        remoteControl.onButtonWasPushed(0);
-        remoteControl.offButtonWasPushed(0);
-        remoteControl.onButtonWasPushed(1);
-        remoteControl.offButtonWasPushed(1);
-        remoteControl.onButtonWasPushed(2);
-        remoteControl.offButtonWasPushed(2);
-        remoteControl.onButtonWasPushed(3);
-        remoteControl.offButtonWasPushed(3);
+        remoteControl.setCommands(0,()->livingRoomLight.on(),()->livingRoomLight.off());
+        remoteControl.setCommands(1,kitchenLight::on,kitchenLight::off);
+        remoteControl.setCommands(2,()->garageDoor.up(),()->garageDoor.down());
+        Command stereoOnWithCD = () -> {
+            stereo.on();
+            stereo.setCD();
+            stereo.setVolume(11);
+        };
+        remoteControl.setCommands(3,stereoOnWithCD,()->stereo.off());
 
 
 
