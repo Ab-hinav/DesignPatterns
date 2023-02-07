@@ -1,5 +1,9 @@
 package org.Designs;
 
+import org.Designs.Adapter.HeadFirst.Duck;
+import org.Designs.Adapter.HeadFirst.MallardDuck;
+import org.Designs.Adapter.HeadFirst.TurkeyAdapter;
+import org.Designs.Adapter.HeadFirst.WildTurkey;
 import org.Designs.Command.headFirst.*;
 import org.Designs.Decorator.HeadFirst.Beverage;
 import org.Designs.Decorator.HeadFirst.Beverages.DarkRoast;
@@ -23,7 +27,7 @@ import org.Designs.Observer.Observers.StatisticsDisplay;
 import org.Designs.Observer.Subjects.WeatherData;
 import org.Designs.Singleton.SingletonBasic;
 import org.Designs.Strategy.FlyBehaviours.FlyRocketPowered;
-import org.Designs.Strategy.MallardDuck;
+//import org.Designs.Strategy.MallardDuck;
 import org.Designs.Strategy.ModelDuck;
 
 import java.io.BufferedInputStream;
@@ -155,6 +159,8 @@ public class Main {
 //        remoteControl.offButtonWasPushed(2);
 //        remoteControl.onButtonWasPushed(3);
 //        remoteControl.offButtonWasPushed(3);
+
+        /*
         System.out.println("Command Pattern -- continue");
         RealRemoteControl remoteControl = new RealRemoteControl();
         Light livingRoomLight = new Light("Living Room");
@@ -171,6 +177,20 @@ public class Main {
             stereo.setVolume(11);
         };
         remoteControl.setCommands(3,stereoOnWithCD,()->stereo.off());
+        */
+
+        System.out.println("Adapter Pattern");
+        MallardDuck duck = new MallardDuck();
+        WildTurkey turkey = new WildTurkey();
+        Duck turkeyAdapter = new TurkeyAdapter(turkey);
+
+        System.out.println("The Turkey says...");
+        turkey.gobble();
+        turkey.fly();
+
+        System.out.println("The Duck says...");
+        turkeyAdapter.quack();
+        turkeyAdapter.fly();
 
 
 
