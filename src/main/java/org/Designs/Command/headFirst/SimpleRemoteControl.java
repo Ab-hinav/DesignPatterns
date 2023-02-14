@@ -16,7 +16,7 @@ public class SimpleRemoteControl {
     }
 
     public void undoButtonWasPressed() {
-        slot.undo();
+//        slot.undo();
     }
 
 

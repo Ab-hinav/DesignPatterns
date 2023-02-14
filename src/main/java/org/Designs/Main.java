@@ -21,6 +21,9 @@ import org.Designs.Factory.HeadFirst.UsingAbstract.AbstractPizza;
 import org.Designs.Factory.HeadFirst.UsingAbstract.AbstractPizzaStore;
 import org.Designs.Factory.HeadFirst.UsingAbstract.ChicagoPizzaStore;
 import org.Designs.Factory.HeadFirst.UsingAbstract.NYStyleStore;
+import org.Designs.Iterator.DinerMenu;
+import org.Designs.Iterator.PancakeHouseMenu;
+import org.Designs.Iterator.Waitress;
 import org.Designs.Observer.Observers.CurrentConditionsDisplay;
 import org.Designs.Observer.Observers.ForcastDisplay;
 import org.Designs.Observer.Observers.StatisticsDisplay;
@@ -179,6 +182,7 @@ public class Main {
         remoteControl.setCommands(3,stereoOnWithCD,()->stereo.off());
         */
 
+        /*
         System.out.println("Adapter Pattern");
         MallardDuck duck = new MallardDuck();
         WildTurkey turkey = new WildTurkey();
@@ -191,6 +195,13 @@ public class Main {
         System.out.println("The Duck says...");
         turkeyAdapter.quack();
         turkeyAdapter.fly();
+        */
+
+        System.out.println("Iterator Pattern");
+        PancakeHouseMenu pancakeHouseMenu = new PancakeHouseMenu();
+        DinerMenu dinerMenu = new DinerMenu();
+        Waitress waitress = new Waitress(pancakeHouseMenu, dinerMenu);
+        waitress.printMenu();
 
 
 
