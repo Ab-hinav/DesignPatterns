@@ -1,5 +1,7 @@
 package org.Designs.Iterator;
 
+import java.util.Iterator;
+
 public class MenuItem {
     String name;
     String description;

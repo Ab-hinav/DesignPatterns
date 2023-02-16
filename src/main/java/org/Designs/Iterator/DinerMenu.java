@@ -1,6 +1,11 @@
 package org.Designs.Iterator;
 
-public class DinerMenu {
+import org.Designs.Iterator.DinerMenuIteratorV2;
+import org.Designs.Iterator.MenuItem;
+
+import java.util.Iterator;
+
+public class DinerMenu implements Menu {
 
     static final int MAX_ITEMS = 6;
     int numberOfItems = 0;
@@ -51,8 +56,8 @@ public class DinerMenu {
         }
     }
 
-    public Iterator createIterator() {
-        return new DinerMenuIterator(menuItems);
+    public Iterator<MenuItem> createIterator() {
+        return new DinerMenuIteratorV2(menuItems);
     }
 
     public MenuItem[] getMenuItems() {

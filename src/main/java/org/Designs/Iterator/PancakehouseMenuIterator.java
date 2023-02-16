@@ -1,6 +1,10 @@
 package org.Designs.Iterator;
 
+
+import org.Designs.Iterator.MenuItem;
+
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class PancakehouseMenuIterator implements Iterator {
 

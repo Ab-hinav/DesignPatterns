@@ -1,4 +1,5 @@
-package org.Designs.Iterator;
+import java.awt.*;
+import java.util.Iterator;
 
 public class DinerMenuIterator implements Iterator {
     MenuItem[] items;
