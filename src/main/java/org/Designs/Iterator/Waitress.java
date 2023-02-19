@@ -9,10 +9,12 @@ public class Waitress {
 
     Menu pancakeHouseMenu;
     Menu dinerMenu;
+    Menu cafeMenu;
 
-    public Waitress(Menu pancakeHouseMenu, Menu dinerMenu) {
+    public Waitress(Menu pancakeHouseMenu, Menu dinerMenu , Menu cafeMenu) {
         this.pancakeHouseMenu = pancakeHouseMenu;
         this.dinerMenu = dinerMenu;
+        this.cafeMenu = cafeMenu;
     }
 
     public void printMenu() {
@@ -22,6 +24,9 @@ public class Waitress {
         printMenu(pancakeIterator);
         System.out.println("\nLUNCH");
         printMenu(dinerIterator);
+        System.out.println("\nDINNER");
+        printMenu(cafeMenu.createIterator());
+        System.out.println("\n");
     }
 
     private void printMenu(Iterator iterator) {
