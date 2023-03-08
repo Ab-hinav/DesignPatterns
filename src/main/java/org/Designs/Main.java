@@ -29,6 +29,8 @@ import org.Designs.Iterator.CafeMenu;
 import org.Designs.Iterator.DinerMenu;
 import org.Designs.Iterator.PancakeHouseMenu;
 //import org.Designs.Iterator.Waitress;
+import org.Designs.NullObject.Vehicle;
+import org.Designs.NullObject.VehicleFactory;
 import org.Designs.Observer.Observers.CurrentConditionsDisplay;
 import org.Designs.Observer.Observers.ForcastDisplay;
 import org.Designs.Observer.Observers.StatisticsDisplay;
@@ -211,6 +213,7 @@ public class Main {
         waitress.printMenu();
         */
 
+        /*
         System.out.println("Composite Pattern");
         MenuComponent pancakeHouseMenu = new Menu("PANCAKE HOUSE MENU", "Breakfast");
         MenuComponent dinerMenu = new Menu("DINER MENU", "Lunch");
@@ -244,6 +247,16 @@ public class Main {
 
         Waitress waitress = new Waitress(allMenus);
         waitress.printMenu();
+        */
+
+        System.out.println("Null Object Pattern");
+        VehicleFactory vehicleFactory = new VehicleFactory();
+        Vehicle car = vehicleFactory.getVehicle("Car");
+        Vehicle bike = vehicleFactory.getVehicle("Bike");
+
+        System.out.println(car.getVehicleName());
+        System.out.println(bike.getVehicleName());
+        // using null object pattern we can avoid null pointer exception , and no need to check for null
 
 
 
