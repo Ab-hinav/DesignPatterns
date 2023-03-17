@@ -79,4 +79,12 @@ public class GumballMachine {
         return result.toString();
     }
 
+    public void refill(int count) {
+        if (count == 0 ){
+            this.count = count;
+            state = noQuarterState;
+        }
+    }
+
+
 }
