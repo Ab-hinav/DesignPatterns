@@ -20,8 +20,9 @@ public class NoQuarterState implements State{
     }
 
     @Override
-    public void turnCrank() {
+    public boolean turnCrank() {
         System.out.println("You turned, but there's no quarter");
+        return false;
     }
 
     @Override

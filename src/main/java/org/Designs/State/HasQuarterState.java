@@ -21,13 +21,15 @@ public class HasQuarterState implements State {
     }
 
     @Override
-    public void turnCrank() {
+    public boolean turnCrank() {
         System.out.println("You turned...");
         int winner = randomWinner.nextInt(10);
-        if (winner==10 && gumballMachine.getCount()>1) {
+        if (winner==0 && gumballMachine.getCount()>1) {
             gumballMachine.setState(gumballMachine.getWinnerState());
+            return true;
         } else {
             gumballMachine.setState(gumballMachine.getSoldState());
+            return true;
         }
     }
 

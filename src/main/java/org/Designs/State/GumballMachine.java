@@ -33,8 +33,9 @@ public class GumballMachine {
     }
 
     public void turnCrank() {
-        state.turnCrank();
-        state.dispense();
+        if (state.turnCrank()) {
+            state.dispense();
+        }
     }
 
     void setState(State state) {
@@ -70,6 +71,12 @@ public class GumballMachine {
 
     public State getWinnerState() {
         return winnerState;
+    }
+
+    public String toString() {
+        StringBuffer result = new StringBuffer();
+        result.append("" + state + ":" + count + " gumballs");
+        return result.toString();
     }
 
 }

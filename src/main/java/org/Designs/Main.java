@@ -36,6 +36,7 @@ import org.Designs.Observer.Observers.ForcastDisplay;
 import org.Designs.Observer.Observers.StatisticsDisplay;
 import org.Designs.Observer.Subjects.WeatherData;
 import org.Designs.Singleton.SingletonBasic;
+import org.Designs.State.GumballMachine;
 import org.Designs.Strategy.FlyBehaviours.FlyRocketPowered;
 //import org.Designs.Strategy.MallardDuck;
 import org.Designs.Strategy.ModelDuck;
@@ -248,7 +249,7 @@ public class Main {
         Waitress waitress = new Waitress(allMenus);
         waitress.printMenu();
         */
-
+        /*
         System.out.println("Null Object Pattern");
         VehicleFactory vehicleFactory = new VehicleFactory();
         Vehicle car = vehicleFactory.getVehicle("Car");
@@ -257,6 +258,17 @@ public class Main {
         System.out.println(car.getVehicleName());
         System.out.println(bike.getVehicleName());
         // using null object pattern we can avoid null pointer exception , and no need to check for null
+        */
+
+        System.out.println("State Pattern");
+        GumballMachine gumballMachine = new GumballMachine(5);
+        System.out.println(gumballMachine);
+        gumballMachine.insertQuarter();
+        gumballMachine.turnCrank();
+        System.out.println(gumballMachine);
+        gumballMachine.insertQuarter();
+        gumballMachine.turnCrank();
+        System.out.println(gumballMachine);
 
 
 
