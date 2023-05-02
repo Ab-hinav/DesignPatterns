@@ -1,4 +1,4 @@
-package org.Designs.Proxy.HeadFirst;
+package org.Designs.Proxy.HeadFirst.RemoteProxy;
 
 import java.rmi.Naming;
 

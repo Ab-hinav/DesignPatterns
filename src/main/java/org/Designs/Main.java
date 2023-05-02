@@ -1,50 +1,8 @@
 package org.Designs;
 
-import org.Designs.Adapter.HeadFirst.Duck;
-import org.Designs.Adapter.HeadFirst.MallardDuck;
-import org.Designs.Adapter.HeadFirst.TurkeyAdapter;
-import org.Designs.Adapter.HeadFirst.WildTurkey;
-import org.Designs.Command.headFirst.*;
-import org.Designs.Composite.Menu;
-import org.Designs.Composite.MenuComponent;
-import org.Designs.Composite.MenuItem;
-import org.Designs.Composite.Waitress;
-import org.Designs.Decorator.HeadFirst.Beverage;
-import org.Designs.Decorator.HeadFirst.Beverages.DarkRoast;
-import org.Designs.Decorator.HeadFirst.Beverages.Expresso;
-import org.Designs.Decorator.HeadFirst.Beverages.HouseBlend;
-import org.Designs.Decorator.HeadFirst.Condiments.Milk;
-import org.Designs.Decorator.HeadFirst.Condiments.Mocha;
-import org.Designs.Decorator.HeadFirst.Condiments.Whip;
-import org.Designs.Decorator.HeadFirst.LowerCaseInputStream;
-import org.Designs.Decorator.Pizzas.BasePizza;
-import org.Designs.Decorator.Pizzas.Jalapeno;
-import org.Designs.Decorator.Pizzas.Margaritta;
-import org.Designs.Decorator.Pizzas.Olives;
-import org.Designs.Factory.HeadFirst.UsingAbstract.AbstractPizza;
-import org.Designs.Factory.HeadFirst.UsingAbstract.AbstractPizzaStore;
-import org.Designs.Factory.HeadFirst.UsingAbstract.ChicagoPizzaStore;
-import org.Designs.Factory.HeadFirst.UsingAbstract.NYStyleStore;
-import org.Designs.Iterator.CafeMenu;
-import org.Designs.Iterator.DinerMenu;
-import org.Designs.Iterator.PancakeHouseMenu;
 //import org.Designs.Iterator.Waitress;
-import org.Designs.NullObject.Vehicle;
-import org.Designs.NullObject.VehicleFactory;
-import org.Designs.Observer.Observers.CurrentConditionsDisplay;
-import org.Designs.Observer.Observers.ForcastDisplay;
-import org.Designs.Observer.Observers.StatisticsDisplay;
-import org.Designs.Observer.Subjects.WeatherData;
-import org.Designs.Proxy.HeadFirst.GumballMachineRemote;
-import org.Designs.Singleton.SingletonBasic;
-import org.Designs.State.GumballMachine;
-import org.Designs.Strategy.FlyBehaviours.FlyRocketPowered;
 //import org.Designs.Strategy.MallardDuck;
-import org.Designs.Strategy.ModelDuck;
 
-import java.io.BufferedInputStream;
-import java.io.InputStream;
-import java.rmi.Naming;
 
 public class Main {
     public static void main(String[] args) {

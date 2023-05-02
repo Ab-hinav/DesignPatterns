@@ -1,6 +1,6 @@
 package org.Designs.State;
 
-import org.Designs.Proxy.HeadFirst.GumballMachineRemote;
+import org.Designs.Proxy.HeadFirst.RemoteProxy.GumballMachineRemote;
 
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
