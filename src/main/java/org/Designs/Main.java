@@ -35,6 +35,7 @@ import org.Designs.Observer.Observers.CurrentConditionsDisplay;
 import org.Designs.Observer.Observers.ForcastDisplay;
 import org.Designs.Observer.Observers.StatisticsDisplay;
 import org.Designs.Observer.Subjects.WeatherData;
+import org.Designs.Proxy.HeadFirst.GumballMachineRemote;
 import org.Designs.Singleton.SingletonBasic;
 import org.Designs.State.GumballMachine;
 import org.Designs.Strategy.FlyBehaviours.FlyRocketPowered;
@@ -43,6 +44,7 @@ import org.Designs.Strategy.ModelDuck;
 
 import java.io.BufferedInputStream;
 import java.io.InputStream;
+import java.rmi.Naming;
 
 public class Main {
     public static void main(String[] args) {
@@ -260,15 +262,24 @@ public class Main {
         // using null object pattern we can avoid null pointer exception , and no need to check for null
         */
 
-        System.out.println("State Pattern");
-        GumballMachine gumballMachine = new GumballMachine(5);
-        System.out.println(gumballMachine);
-        gumballMachine.insertQuarter();
-        gumballMachine.turnCrank();
-        System.out.println(gumballMachine);
-        gumballMachine.insertQuarter();
-        gumballMachine.turnCrank();
-        System.out.println(gumballMachine);
+//        System.out.println("State Pattern");
+//        try {
+//            GumballMachine gumballMachine = new GumballMachine(5);
+//            System.out.println(gumballMachine);
+//        gumballMachine.insertQuarter();
+//        gumballMachine.turnCrank();
+//        System.out.println(gumballMachine);
+//        gumballMachine.insertQuarter();
+//        gumballMachine.turnCrank();
+//        System.out.println(gumballMachine);
+//        }catch (Exception ex){
+//            System.out.println(ex.getMessage());
+//        }
+
+
+
+
+
 
 
 

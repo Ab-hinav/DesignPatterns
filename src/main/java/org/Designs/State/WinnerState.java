@@ -1,7 +1,8 @@
 package org.Designs.State;
 
 public class WinnerState implements State {
-    GumballMachine gumballMachine;
+    private static final long serialVersionUID = 5;
+    transient GumballMachine gumballMachine;
     public WinnerState(GumballMachine gumballMachine) {
         this.gumballMachine = gumballMachine;
     }

@@ -2,7 +2,8 @@ package org.Designs.State;
 
 public class SoldOutState implements State {
 
-    GumballMachine gumballMachine;
+    private static final long serialVersionUID = 1;
+    transient GumballMachine gumballMachine;
     public SoldOutState(GumballMachine gumballMachine) {
         this.gumballMachine = gumballMachine;
     }

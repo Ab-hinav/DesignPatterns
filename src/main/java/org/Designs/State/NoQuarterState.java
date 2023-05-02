@@ -2,7 +2,8 @@ package org.Designs.State;
 
 public class NoQuarterState implements State{
 
-    GumballMachine gumballMachine;
+    private static final long serialVersionUID = 3;
+    transient GumballMachine gumballMachine;
 
     public NoQuarterState(GumballMachine gumballMachine) {
         this.gumballMachine = gumballMachine;
